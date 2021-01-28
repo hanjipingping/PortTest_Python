@@ -5,10 +5,12 @@
 # File :run.py
 # @software PyCharm
 import unittest
-import os
+import os,sys
 from Common.handel_path import CASE_DIR,REPORT_DIR
 from unittestreport import TestRunner
-
+dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(dir)
+sys.path.append(r"/Users/hanjiping/Library/Python/3.9/lib/python/site-packages")
 
 suite = unittest.defaultTestLoader.discover(CASE_DIR)
 
